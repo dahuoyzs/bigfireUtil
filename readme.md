@@ -16,23 +16,25 @@
 
 **1.获取百度标题**
 
-![title](img\title.png)
+![title](https://github.com/dahuoyzs/bigfireUtil/blob/master/img/title.png?raw=true)
 
 2.获取网页中的图片连接
 
-![getImgs](img\getImgs.png)
+![getImgs](https://github.com/dahuoyzs/bigfireUtil/blob/master/img/getImgs.png?raw=true)
 
 
 
 好了，我们有了基础的知识，下面我们写个小demo吧
 
-![imgdownload](img\imgdownload.png)
+![imgdownload](https://github.com/dahuoyzs/bigfireUtil/blob/master/img/imgdownload.png?raw=true)
 
 what???
 
 哈哈,作者加了图形化界面而已,
 
-对于图形化界面不在范围本工具类范围内，不过图中的小demo源码也会提供一下。
+对于图形化界面不在范围本工具类范围内
+
+不过图中的小demo源码后期整理后也会提供一下。
 
 
 
@@ -154,6 +156,10 @@ MultipleHttp.java			//自娱自乐的一个 多线程 批量请求的工具类,
 
 
 具体代码中有更详细的注释，欢迎下载学习。
+
+
+
+
 
 
 
