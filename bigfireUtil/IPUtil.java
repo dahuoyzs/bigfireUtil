@@ -33,23 +33,15 @@ public class IPUtil {
         return false;
     }
 
-    //获取自己的公网IP
+    //获取自己的公网IP【无依赖】
     public static String getIp() {
         String ipUrl = "https://www.ip.cn/";
-        String resStr = HttpUtil.get(ipUrl);
-        String fromIp = StrUtil.subBetween(resStr, "您现在的 IP：<code>", "</code></p><p>所在地理位置");
-        return fromIp;
+        return StrUtil.getBetweenfirst(HttpUtil.utf8Get(ipUrl), "您现在的 IP：<code>", "</code></p><p>所在地理位置");
     }
-
     //获取当前ip的大概地址
     public static String getAddress(String fromIp) {
         String ipToAddrUrl = "https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?query="+fromIp+"&resource_id=6006";
-        String res = HttpUtil.get(ipToAddrUrl);
-        String address = JSONObject.parseObject(res)
-                .getJSONArray("data")
-                .getJSONObject(0)
-                .getString("location");
-        return address;
+        return StrUtil.getBetweenfirst(HttpUtil.gbkGet(ipToAddrUrl),"location\":\"","\",\"");
     }
 
 }
