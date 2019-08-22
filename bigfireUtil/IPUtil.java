@@ -33,7 +33,7 @@ public class IPUtil {
         return false;
     }
 
-    //获取自己的公网IP【无依赖】
+    //获取自己的公网IP
     public static String getIp() {
         String ipUrl = "https://www.ip.cn/";
         return StrUtil.getBetweenfirst(HttpUtil.utf8Get(ipUrl), "您现在的 IP：<code>", "</code></p><p>所在地理位置");
@@ -42,6 +42,11 @@ public class IPUtil {
     public static String getAddress(String fromIp) {
         String ipToAddrUrl = "https://sp0.baidu.com/8aQDcjqpAAV3otqbppnN2DJv/api.php?query="+fromIp+"&resource_id=6006";
         return StrUtil.getBetweenfirst(HttpUtil.gbkGet(ipToAddrUrl),"location\":\"","\",\"");
+    }
+    //测试方法
+    public static void main(String[] args) {
+        System.out.println(getIp());//180.168.253.65
+        System.out.println(getAddress(getIp()));//上海市浦东新区 电信
     }
 
 }
