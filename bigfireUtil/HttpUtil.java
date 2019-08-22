@@ -34,7 +34,7 @@ import javax.net.ssl.X509TrustManager;
  * @ Addr   ：China ZhengZhou
  * @ email  ：835476090@qq.com
  */
-public class HttpUtils {
+public class HttpUtil {
 	
     /**
      * 向指定URL发送GET方法的请求
